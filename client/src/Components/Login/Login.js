@@ -21,8 +21,8 @@ const Login = ({ setUser }) => {
     age: '',
     doc: false
   })
-  
-  
+
+
   const handleChange = (e) => {
     const {name, value} = e.target
     setLoginData(loginData => ({...loginData, [name]: value}) )
@@ -82,7 +82,7 @@ const Login = ({ setUser }) => {
       }
     })
   }
-  
+
   const handleDocClick = () => {
     setDocLogin(true)
     setPatLogin(false)
@@ -110,7 +110,7 @@ const Login = ({ setUser }) => {
           <button className={patLogin ? 'active' : null} onClick={handlePatClick}>Patient</button>
           <button className={docLogin || patLogin ? null : 'active'} onClick={handleSignupClick}>SignUp </button>
         </div>
-        {docLogin || patLogin ? 
+        {docLogin || patLogin ?
           <form className='input-group' onSubmit={handleLoginSubmit}>
               <label className='input-label'>{docLogin ? 'Employee ' : 'Patient '}Email:</label>
               <input className='input' type='text' name='email' id='email' onChange={handleChange} value={loginData.email}></input>
@@ -122,7 +122,7 @@ const Login = ({ setUser }) => {
               <br></br>
               {error ? <p className='error'>{error}</p> : null }
               <br></br>
-              <a href='#' onClick={handleLoginSubmit}  value='Login' className='button'>Login</a>
+              <button onClick={handleLoginSubmit}  value='Login' className='button'>Login</button>
               <br></br>
               <br></br>
               <br></br>
@@ -155,7 +155,7 @@ const Login = ({ setUser }) => {
             <br></br>
             <br></br>
             <br></br>
-            <a href='#' onClick={handleSignUpSubmit} className='button'>Sign Up</a>
+            <button onClick={handleSignUpSubmit} className='button'>Sign Up</button>
             <br></br>
             <br></br>
             <br></br>

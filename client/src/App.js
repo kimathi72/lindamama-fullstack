@@ -12,7 +12,6 @@ import { fetchResults } from './Features/resultsSlice.js'
 
 import NavBar from './Components/NavBar/NavBar.js';
 import Home from './Components/Home/Home.js';
-import AboutUs from './Components/AboutUs/AboutUs.js';
 import Login from './Components/Login/Login.js';
 import Departments from './Components/Departments/Departments.js';
 import DepartmentProfile from './Components/DepartmentProfile/DepartmentProfile.js';
@@ -72,7 +71,6 @@ function App() {
       <Routes>
         <Route exact path = '/' element={<Home/>}/>
         <Route exact path = '/departments' element={<Departments departments={departments} setDept={setDept} />}/>
-        <Route path = '/aboutus' element={<AboutUs  />}/>
         <Route path = '/login' element={<Login setUser={setUser} />}/>
         {/* <Route path="/blog/:id" element={<Blog />} /> */}
         <Route path = '/departments/:id' element={<DepartmentProfile dept={dept} doctors={doctors} setDoc={setDoc} />}/>

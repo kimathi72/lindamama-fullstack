@@ -20,6 +20,7 @@ const PatientCollapsible = ({ patient, docAppointments}) => {
           </span>
         </button>
       </div>
+      
       <div className='collapsible'>
         {docAppointments.map(appt => {
           if(appt.patient_id === patient.id) {

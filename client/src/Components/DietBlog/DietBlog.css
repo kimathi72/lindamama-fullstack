@@ -1,0 +1,195 @@
+@import url('https://fonts.cdnfonts.com/css/croissant-one');
+@import url('https://fonts.cdnfonts.com/css/sonsie-one');
+@import url('https://fonts.cdnfonts.com/css/bakilda-histori');
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    width: 400px;
+    height: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.card-image {
+    width: 400px;
+    height: 280px;
+
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title{
+    display: flex;
+    justify-content: center;
+    font-weight: medium;
+    font-family: 'Bakilda Histori', sans-serif;
+    flex-wrap: wrap;
+    background-color: #fca4f4;
+    padding: 40px 0px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 80%;
+    margin: 5rem auto;
+}
+
+.header {
+    width: 80%;
+    margin: 2rem auto;
+    background-color: rgb(255,192,203);
+    padding: 20px 0px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: rgb(255,192,203);
+    font-size: larger;
+}
+
+.header h1{
+font-family: 'Sonsie One', sans-serif;
+
+}
+
+.blog-image{
+    width: 100%;
+    height: 600px;
+
+
+}
+
+.blog-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-content {
+    min-height: 80vh;
+    width: 100% ;
+    margin: 2rem auto;
+    text-align: justify;
+
+
+}
+
+
+.blog-content div{
+    width: 70%;
+    margin: 0 auto;
+    line-height: 1.5rem;
+    font-size: 25px;
+}
+
+.blog-content h1{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Croissant One', sans-serif;
+    margin: 2rem 0rem;
+}
+.blog-container {
+    min-height: 100vh;
+    margin-bottom: 2rem auto;
+
+}
+.nav-blog-buttons{
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-blog-buttons a{
+    color: black;
+    padding: 10px 20px;
+    background-color:white;
+    border-radius: 50px;
+}
+
+.appointment-form{
+    padding: 2rem;
+
+}
+
+.appointment-form p{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.blogpost-title{
+        font-family:"Pacifico", cursive;
+        font-size: 50px;
+        color:black;
+        justify-content: center;
+
+
+
+
+}
+
+textarea {
+    width: 50%;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 10px 0px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+.appointment-button {
+    padding:20px 150px;
+    border: 1px solid #fca4f4;
+    border-radius: 5px;
+}
+
+.appointment-button:hover {
+    background-color: #fca4f4;
+    color: white;
+    cursor: pointer;
+}
+
+.blog-nav{
+    /* background-image:url(https://images.unsplash.com/photo-1516642898673-edd1ced08e87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80); */
+    justify-content: center;
+    background-color: rgb(255,192,203);
+
+
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right */
+    margin-top: 20px;
+  }
+
+  .page-number {
+    margin: 0 8px;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: #007bff;
+    color: white;
+  }

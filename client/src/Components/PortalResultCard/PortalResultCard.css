@@ -1,0 +1,31 @@
+.result-table{
+  border: 2px solid white;
+  margin: 10px;
+}
+.test-date{
+  font-size: larger;
+}
+.table-header th{
+  background-color: orange;
+  color: white;
+  outline: 3px solid orange;
+  padding: 5px 10px;
+}
+.result-table:hover tr{
+  /* background-color: black; */
+
+  color: black;
+  outline: 1px solid white;
+  transition: background-color .5s;
+}
+.result-table:hover th{
+  background-color:black;
+  color: white;
+  outline: 1px solid white;
+  transition: background-color .5s;
+}
+.row td{
+  outline: 1px solid white;
+  padding: 5px;
+  font-size: larger;
+}

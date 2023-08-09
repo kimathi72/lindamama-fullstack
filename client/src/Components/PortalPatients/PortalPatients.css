@@ -1,0 +1,34 @@
+.appt-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search{
+  display:flex;
+  justify-content: center;
+  font-size: larger;
+}
+
+.patientSearch{
+  color: black;
+  outline: 2px solid rgb(183, 58, 146);
+  padding: 5px 10px;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: large;
+  margin-left: 5px;
+  transition: background-color .5s;
+  transition: outline-color .5s;
+}
+.patientSearch::placeholder{
+  color: black;
+  transition: color .5s;
+}
+.patientSearch:focus{
+  color: black;
+  background-color: white;
+
+}
+.patientSearch:focus::placeholder{
+  color: black;
+}

@@ -1,0 +1,27 @@
+.portal-nav {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.nav-links a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color:black;
+  outline: 2px solid  orange;
+  padding: 10px 40px;
+  margin-left: 70px;
+  transition: color .5s;
+  transition: background-color .5s;
+  transition: outline-color .5s;
+}
+.nav-links a:hover{
+  color:white;
+  background-color:orange;
+  outline-color: orange;
+}
+.nav-links a.active{
+  color:  orange;
+  background-color:white;
+  outline-color:black;
+}

@@ -7,6 +7,7 @@ services:
   - type: web
     name: "linda_mama_fullstack"
     env: ruby
+    plan: free
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:

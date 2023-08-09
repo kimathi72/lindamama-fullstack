@@ -5,14 +5,14 @@ databases:
 
 services:
   - type: web
-    name:"linda_mama_fullstack"
+    name: "linda_mama_fullstack"
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name:"linda_mama_fullstack"
+          name: "linda_mama_fullstack"
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false

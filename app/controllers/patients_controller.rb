@@ -12,7 +12,19 @@ class PatientsController < ApplicationController
   end
 
   def create
-    render json: Patient.create!(patient_params), status: :created
+    @patient = Patient.create(patient_params)
+    if @patient.valid?
+      @token = encode_token(patient_id: @patient.id)
+      from = Email.new(email: 'roy.kimathi@student.moringaschool.com')
+      to = Email.new(email: @user.email)
+      subject = 'Welcome to Linda Mama'
+      content = Content.new(type: 'text/plain', value: @token)
+      mail = Mail.new(from, subject, to, content)
+
+      sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+      response = sg.client.mail._('send').post(request_body: mail.to_json)
+      puts response
+    render json: {patient: PatientSerializer.new(@patient), jwt: @token}, status: :created
   end
 
   def destroy

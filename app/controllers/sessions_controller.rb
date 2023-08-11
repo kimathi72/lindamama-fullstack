@@ -3,10 +3,11 @@ class SessionsController < ApplicationController
   skip_before_action :is_doc, only: [:doclogin, :patientlogin]
 
   def doclogin
-    user = Doctor.find_by(email: params[:email])
-    if user&.authenticate(params[:password])
+    @user = Doctor.find_by(email: params[:email])
+    if @user&.authenticate(params[:password])
       session[:current_user] = user.id
-      render json: user, status: :ok
+      token = encode_token({user_id: @user.id})
+      render json: {user: DoctorSerializer.new(@user), jwt: token}, status: :accepted
     else
       render json: { error: ["invalid email and/or password"] }, status: :unauthorized
     end

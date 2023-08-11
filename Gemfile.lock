@@ -94,6 +94,7 @@ GEM
     irb (1.7.4)
       reline (>= 0.3.6)
     jsonapi-renderer (0.2.2)
+    jwt (2.7.1)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -163,6 +164,9 @@ GEM
     rake (13.0.6)
     reline (0.3.7)
       io-console (~> 0.5)
+    ruby_http_client (3.5.5)
+    sendgrid-ruby (6.6.2)
+      ruby_http_client (~> 3.4)
     thor (1.2.2)
     timeout (0.4.0)
     tzinfo (2.0.6)
@@ -182,10 +186,12 @@ DEPENDENCIES
   bootsnap
   debug
   faker
+  jwt (~> 2.7)
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.6)
+  sendgrid-ruby
   tzinfo-data
 
 RUBY VERSION
